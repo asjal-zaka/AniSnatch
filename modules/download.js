@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import axios from "axios";
 import { load } from "cheerio";
 
-
+const baseURL = "https://anitaku.so"
 export const getLinks = async (epID) => {
  const searchURL = await axios.get(`${baseURL}/${epID}`);
 const $ = load(await searchURL.data)
