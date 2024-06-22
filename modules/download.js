@@ -1,4 +1,7 @@
 import { chromium } from 'playwright';
+import axios from "axios";
+import { load } from "cheerio";
+
 
 export const getLinks = async (epID) => {
  const searchURL = await axios.get(`${baseURL}/${epID}`);
