@@ -1,5 +1,12 @@
 import { chromium } from 'playwright';
 
+export const getLinks = async (epID) => {
+ const searchURL = await axios.get(`${baseURL}/${epID}`);
+const $ = load(await searchURL.data)
+const link = $('.dowloads').find('a').attr('href');
+return link;
+}
+
 export const getDownload = async (link) => {
   let browser = null;
   try {
