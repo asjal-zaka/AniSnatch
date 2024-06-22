@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer-core';
-import chrome from 'chrome-aws-lambda';
+import chromium from 'chrome-aws-lambda';
 import axios from "axios";
 import { load } from "cheerio";
 
