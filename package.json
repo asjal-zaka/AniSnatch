@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall" : "npx playwright install"
+    "postinstall" : "npx playwright install && npx playwright install-deps"
   },
   "author": "",
   "license": "ISC",
