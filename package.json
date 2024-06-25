@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "vercel dev",
+    "deploy": "vercel"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +16,7 @@
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
-    "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^10.4.0"
+    "puppeteer-core": "^22.6.4"
   },
   "engines": {
     "node": ">=20"
