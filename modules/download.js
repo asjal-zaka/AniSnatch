@@ -6,11 +6,12 @@ import chromium from "@sparticuz/chromium";
 const baseURL = "https://anitaku.to";
 
 export const getLinks = async (epID) => {
-    const searchURL = await axios.get(`${baseURL}/${epID}`);
-    const $ = load(await searchURL.data);
-    const link = $('.dowloads').find('a').attr('href');
-    return link;
+ const searchURL = await axios.get(`${baseURL}/${epID}`);
+const $ = load(await searchURL.data)
+const link = $('.dowloads').find('a').attr('href');
+return link;
 }
+
 
 export const getDownload = async (link) => {
   const browser = await puppeteer.launch({
