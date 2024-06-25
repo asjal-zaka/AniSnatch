@@ -47,21 +47,23 @@ app.get('/episodes', async (req, res) => {
 
 app.get('/download', async (req, res) => {
     try {
+        res.json({ message: 'Operation started. Results will be sent shortly.' });
         const links = await getLinks(req.query.id);
         let data = await getDownload(links);
         if (req.query.res === '360p') {
-            data = data[0];
+          data = data[0];
         } else if (req.query.res === '480p') {
-            data = data[1];
+          data = data[1];
         } else if (req.query.res === '720p') {
-            data = data[2];
+          data = data[2];
         } else if (req.query.res === '1080p') {
-            data = data[3];
+          data = data[3];
         }
-        res.json(data);
-    } catch (error) {
+        res.json("Download link: ");
+      } catch (error) {
+        console.error('Error:', error);
         res.status(500).json({ error: error.message });
-    }
-});
+      }
+    });
 
 export default app;
